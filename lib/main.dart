@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'CoinPay',
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
+        appBarTheme: AppBarTheme(backgroundColor: Colors.white),
         textTheme: ThemeData.light().textTheme.apply(
           bodyColor: Color(0xFF2A2A2A),
           displayColor: Color(0xFF2A2A2A),
