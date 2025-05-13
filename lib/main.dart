@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mbank/create_account.dart';
 import 'onboarding_screen.dart';
 import 'login_screen.dart';
 import 'registration_screen.dart';
@@ -46,6 +47,7 @@ class MyApp extends StatelessWidget {
         '/send': (context) => SendScreen(),
         '/accountsetup': (context) => AccountSetupScreen(),
         '/registration': (context) => RegistrationScreen(),
+        '/registration/create': (context) => CreateAccountScreen(),
         '/registration/verify': (context) => VerifyScreen(),
       },
     );
