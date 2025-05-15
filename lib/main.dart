@@ -48,7 +48,18 @@ class MyApp extends StatelessWidget {
         '/accountsetup': (context) => AccountSetupScreen(),
         '/registration': (context) => RegistrationScreen(),
         '/registration/create': (context) => CreateAccountScreen(),
-        '/registration/verify': (context) => VerifyScreen(),
+      },
+      onGenerateRoute: (settings) {
+        if (settings.name == '/registration/verify') {
+          final args = settings.arguments as String;
+          return MaterialPageRoute(
+            builder: (context) {
+              return VerifyScreen(args);
+            },
+          );
+        }
+        // fallback if needed
+        return null;
       },
     );
   }

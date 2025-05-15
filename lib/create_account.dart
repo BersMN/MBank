@@ -222,6 +222,9 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                                                   () => Navigator.pushNamed(
                                                     context,
                                                     '/registration/verify',
+                                                    arguments:
+                                                        controllerPhoneNumber
+                                                            .text,
                                                   ),
                                               child: Text('Yes'),
                                             ),
