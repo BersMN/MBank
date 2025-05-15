@@ -70,7 +70,10 @@ class _VerifyScreenState extends State<VerifyScreen> {
                               : Color(0xFF304FFE),
                     ),
                     onPressed:
-                        () => Navigator.pushNamed(context, '/accountsetup'),
+                        () =>
+                            otpCode.length < 6
+                                ? null
+                                : Navigator.pushNamed(context, '/accountsetup'),
                     child: Text("Verify Your Number"),
                   ),
                 ],
