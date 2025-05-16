@@ -12,13 +12,13 @@ class HomepageScreen extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: Color(0xFF304FFE),
           leading: IconButton(
-            onPressed: () {},
+            onPressed: () => Navigator.pushNamed(context, '/notfound'),
             icon: Icon(Icons.scoreboard, color: Colors.white),
             highlightColor: Colors.grey.shade400,
           ),
           actions: [
             IconButton(
-              onPressed: () {},
+              onPressed: () => Navigator.pushNamed(context, '/notfound'),
               icon: Icon(Icons.notifications, color: Colors.white),
               highlightColor: Colors.grey.shade400,
             ),
@@ -176,69 +176,77 @@ class HomepageScreen extends StatelessWidget {
                             width: 1,
                             color: Colors.grey.shade300,
                           ),
-                          Column(
-                            children: [
-                              Stack(
-                                children: [
-                                  Container(
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.orange,
-                                    ),
-                                    height: 30,
-                                    width: 30,
-                                    alignment: Alignment.center,
-                                    child: Text(
-                                      "\$",
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                      ),
-                                    ),
-                                  ),
-                                  Positioned(
-                                    top: -2,
-                                    right: -2,
-                                    child: Container(
-                                      height: 12,
-                                      width: 12,
+                          InkWell(
+                            onTap:
+                                () => Navigator.pushNamed(context, '/notfound'),
+                            child: Column(
+                              children: [
+                                Stack(
+                                  children: [
+                                    Container(
                                       decoration: BoxDecoration(
                                         shape: BoxShape.circle,
-                                        color: Colors.white,
-                                      ),
-                                      alignment: Alignment.center,
-                                      child: Icon(
-                                        Icons.arrow_downward_rounded,
-                                        size: 10,
                                         color: Colors.orange,
                                       ),
+                                      height: 30,
+                                      width: 30,
+                                      alignment: Alignment.center,
+                                      child: Text(
+                                        "\$",
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        ),
+                                      ),
                                     ),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(height: 4),
-                              Text("Request", style: TextStyle(fontSize: 12)),
-                            ],
+                                    Positioned(
+                                      top: -2,
+                                      right: -2,
+                                      child: Container(
+                                        height: 12,
+                                        width: 12,
+                                        decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.white,
+                                        ),
+                                        alignment: Alignment.center,
+                                        child: Icon(
+                                          Icons.arrow_downward_rounded,
+                                          size: 10,
+                                          color: Colors.orange,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 4),
+                                Text("Request", style: TextStyle(fontSize: 12)),
+                              ],
+                            ),
                           ),
                           Container(
                             height: 28,
                             width: 1,
                             color: Colors.grey.shade300,
                           ),
-                          Column(
-                            children: [
-                              SizedBox(
-                                height: 30,
-                                width: 30,
-                                child: Icon(
-                                  Icons.account_balance_outlined,
-                                  color: Colors.orange,
-                                  size: 28,
+                          InkWell(
+                            onTap:
+                                () => Navigator.pushNamed(context, '/notfound'),
+                            child: Column(
+                              children: [
+                                SizedBox(
+                                  height: 30,
+                                  width: 30,
+                                  child: Icon(
+                                    Icons.account_balance_outlined,
+                                    color: Colors.orange,
+                                    size: 28,
+                                  ),
                                 ),
-                              ),
-                              SizedBox(height: 4),
-                              Text("Bank", style: TextStyle(fontSize: 12)),
-                            ],
+                                SizedBox(height: 4),
+                                Text("Bank", style: TextStyle(fontSize: 12)),
+                              ],
+                            ),
                           ),
                         ],
                       ),
