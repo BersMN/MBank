@@ -3,6 +3,8 @@ import 'package:mbank/create_account.dart';
 import 'package:mbank/not_found_screen.dart';
 import 'package:mbank/scan_to_pay.dart';
 import 'package:mbank/select_purpose.dart';
+import 'package:mbank/select_purpose2.dart';
+import 'package:mbank/select_purpose3.dart';
 import 'package:mbank/sent_success.dart';
 import 'onboarding_screen.dart';
 import 'login_screen.dart';
@@ -56,6 +58,8 @@ class MyApp extends StatelessWidget {
         '/registration': (context) => RegistrationScreen(),
         '/registration/create': (context) => CreateAccountScreen(),
         '/selectpurpose': (context) => SelectPurpose(),
+        '/selectpurpose2': (context) => SelectPurpose2(),
+        '/selectpurpose3': (context) => SelectPurpose3(),
         '/scantopay': (context) => ScanToPayScreen(),
         '/sentsuccess': (context) => SentSuccessScreen(),
         '/notfound': (context) => NotFoundScreen(),
