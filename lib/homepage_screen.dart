@@ -122,49 +122,52 @@ class HomepageScreen extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Column(
-                          children: [
-                            Stack(
-                              children: [
-                                Container(
-                                  decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.blue[800],
-                                  ),
-                                  height: 30,
-                                  width: 30,
-                                  alignment: Alignment.center,
-                                  child: Text(
-                                    "\$",
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                ),
-                                Positioned(
-                                  top: -2,
-                                  right: -2,
-                                  child: Container(
-                                    height: 12,
-                                    width: 12,
+                        InkWell(
+                          onTap: () => Navigator.pushNamed(context, '/send'),
+                          child: Column(
+                            children: [
+                              Stack(
+                                children: [
+                                  Container(
                                     decoration: BoxDecoration(
                                       shape: BoxShape.circle,
-                                      color: Colors.white,
-                                    ),
-                                    alignment: Alignment.center,
-                                    child: Icon(
-                                      Icons.arrow_upward_rounded,
-                                      size: 10,
                                       color: Colors.blue[800],
                                     ),
+                                    height: 30,
+                                    width: 30,
+                                    alignment: Alignment.center,
+                                    child: Text(
+                                      "\$",
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                      ),
+                                    ),
                                   ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 4),
-                            Text("Send", style: TextStyle(fontSize: 12)),
-                          ],
+                                  Positioned(
+                                    top: -2,
+                                    right: -2,
+                                    child: Container(
+                                      height: 12,
+                                      width: 12,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.white,
+                                      ),
+                                      alignment: Alignment.center,
+                                      child: Icon(
+                                        Icons.arrow_upward_rounded,
+                                        size: 10,
+                                        color: Colors.blue[800],
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 4),
+                              Text("Send", style: TextStyle(fontSize: 12)),
+                            ],
+                          ),
                         ),
                         Container(
                           height: 28,
