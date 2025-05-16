@@ -26,6 +26,9 @@ class MyApp extends StatelessWidget {
           bodyColor: Color(0xFF2A2A2A),
           displayColor: Color(0xFF2A2A2A),
         ),
+        textSelectionTheme: TextSelectionThemeData(
+          cursorColor: Color(0xFF304FFE),
+        ),
         textButtonTheme: TextButtonThemeData(
           style: TextButton.styleFrom(
             foregroundColor: Colors.white,
